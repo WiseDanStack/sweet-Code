@@ -1,0 +1,58 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(0, 0, 0, .8);
+}
+/***** Start Hamburger *******************/
+.hamburger {
+    height: 5px;
+    width: 40px;
+    margin: 30px 50px;
+    position: relative;
+}
+.hamburger .wd {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: red;
+    transition: all 1s ease;
+    display: block;
+
+    /*display: none;*/
+}
+.hamburger.active .wd{
+    display: none;
+}
+.hamburger::before {
+    margin-top: -10px;
+    content: '';
+    height: 5px;
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    transition: all .7s ease;
+    /*
+    transform: rotate(45deg) translate(-2px, 12px);*/
+
+}
+.hamburger.active::before{
+    transform: rotate(45deg) translate(-2px, 12px);
+}
+.hamburger::after {
+    margin-top: 10px;
+    content: '';
+    height: 5px;
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    transition: all 1s ease;
+    /*
+    transform: rotate(-45deg) translate(2px, -15px);*/
+}
+.hamburger.active::after{
+    transform: rotate(-45deg) translate(2px, -15px);
+}
+/******************** End Hamburger Menu *************/
